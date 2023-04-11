@@ -767,8 +767,8 @@ button {
   top: 72px;
 }
 
-.component-modal-field {
-  display: flex;
+.modal-field {
+  display: block;
 }
 
 .modal-input {
@@ -831,19 +831,16 @@ button {
 }
 
 .modal-textarea {
-  display: block;
   width: 100%;
   height: 120px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   background-color: transparent;
   resize: none;
   outline: transparent;
   padding-top: 8px;
   padding-left: 16px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
+  
 }
 
 .modal-textarea:focus {
