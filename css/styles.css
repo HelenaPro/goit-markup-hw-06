@@ -561,7 +561,7 @@ button {
   fill: #ffffff;
 }
 
-.footer-btn-input:is(:focus, :hover) + .footer-btn-icon {
+.footer-btn-input:is(:focus, :hover) {
   background-color: #404bbf;
 }
 
