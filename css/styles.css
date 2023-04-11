@@ -502,6 +502,69 @@ button {
   fill: #F4F4FD;
 }
 
+.footer-subscribe {
+  margin-left: 80px;
+}
+.subscribe-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  display: flex;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.footer-form {
+  display: flex;
+}
+
+.footer-field {
+  display: flex;
+}
+
+.footer-input {
+  padding: 8px 16px 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: transparent;
+  width: 264;
+  height: 40px;
+  margin-right: 24px;
+  color: #ffffff;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-btn-input {
+  width: 165px;
+  height: 40px;
+  padding: 8px 24px;
+  background-color: #4d5ae5;
+  border-radius: 4px;
+  border: transparent;
+  display: flex;
+  gap: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-btn-icon {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+}
+
+.footer-btn-input:is(:focus, :hover) + .footer-btn-icon {
+  background-color: #404bbf;
+}
+
 /*---------PORTFOLIO--------*/
 .section-portfolio {
   padding-bottom: 120px;
@@ -615,6 +678,8 @@ button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/*--------------MODAL--------------*/
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -683,11 +748,13 @@ button {
   overflow: hidden;
 }
 
-.component-text{
-  display: flex;
-  color: #ffffff;
-  text-align: center;
+
+.modal-form {
+  display: inline-block;
+  text-align: start;
+  width: 100%;
 }
+
 .modal-title {
   font-style: normal;
   font-weight: 500;
@@ -699,51 +766,14 @@ button {
   margin-bottom: 16px;
   top: 72px;
 }
-.component-form {
+
+.component-modal-field {
   display: flex;
-}
-
-.component-field {
-  display: flex;
-}
-
-.component-input {
-  padding: 8px 16px 8px 16px;
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-  background-color: transparent;
-  width: 264px;
-  height: 40px;
-  margin-right: 24px;
-  color: #f4f4fd;
-  outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.component-btn-input {
-  width: 165px;
-  height: 40px;
-  padding: 8px 24px;
-  background-color: #4d5ae5;
-  border-radius: 4px;
-  border: transparent;
-  display: flex;
-  gap: 16px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.component-icon {
-  top: 8px;
-  left: 117px;
 }
 
 .modal-input {
+  display: flex;
+  gap: 16px;
   width: 100%;
   height: 40px;
   left: 32px;
@@ -756,16 +786,20 @@ button {
   line-height: 1.17;
   letter-spacing: 0.04em;
   outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input::placeholder {
   font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
   color: rgba(46, 47, 66, 0.4);
 }
 
 .modal-lable-text {
-  display: inline-block;
+  display: block;
   font-style: normal;
+  text-align: left ;
   margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
@@ -779,10 +813,12 @@ button {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  fill: #8e8f99;
 }
 
 .modal-input:focus {
   border-color: #4d5ae5;
+  outline: none;
 }
 
 .modal-input:focus + .modal-input-icon {
@@ -805,15 +841,20 @@ button {
   outline: transparent;
   padding-top: 8px;
   padding-left: 16px;
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .modal-textarea:focus {
   border-color: #4d5ae5;
+}
+.modal-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
 }
 
 .check-text {
@@ -822,7 +863,6 @@ button {
   letter-spacing: 0.04em;
   color: #8e8f99;
   display: flex;
-  align-items: center;
   gap: 8px;
 }
 
@@ -864,67 +904,4 @@ button {
   font-size: 16px;
   line-height: 1.5;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-subscribe {
-  margin-left: 80px;
-}
-.subscribe-text {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  display: flex;
-  color: #ffffff;
-  text-align: center;
-  margin-bottom: 16px;
-}
-
-.footer-form {
-  display: flex;
-}
-
-.footer-field {
-  display: flex;
-}
-
-.footer-input {
-  padding: 8px 16px 8px 16px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 4px;
-  background-color: transparent;
-  width: 264;
-  height: 40px;
-  margin-right: 24px;
-  color: #ffffff;
-  outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-btn-input {
-  width: 165px;
-  height: 40px;
-  padding: 8px 24px;
-  background-color: #4d5ae5;
-  border-radius: 4px;
-  border: transparent;
-  display: flex;
-  gap: 16px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: center;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.footer-btn-icon {
-  width: 24px;
-  height: 24px;
-  fill: #ffffff;
-}
-
-.footer-btn-input:is(:hover, :focus) .footer-btn-icon {
-  fill: #404bbf;
 }
